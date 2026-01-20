@@ -1,0 +1,291 @@
+
+.mian-box {
+    @extend .popup-bg;
+    width           : 288px;
+    height          : fit-content;       
+    padding-left    : 10px;
+    padding-right   : 10px;
+    padding-bottom  : 12px;
+    display         : flex;
+    flex-direction  : column;
+    position        : relative;
+    margin-bottom   : 60px;
+    border-radius   : 10px;    
+}
+
+.box-close {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forgot-pwd-title {
+    font-size     : 17px;
+    font-weight   : bold;
+    color         : #000000;
+    text-align    : center;
+    border-bottom : 1px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin        : 10px 10px 20px 10px;
+}
+
+.step-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+    padding: 10px 10px 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.step-wrapper {
+    margin-top: 10px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    flex: 1;
+    height: 70px;
+    text-align: center;
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #000;
+    background: var(--secondary-color);
+    margin-bottom: 8px;
+    opacity: 1;
+    margin: 0 auto 8px;
+    
+    &.active {
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+        color: white;
+        opacity: 1; // 确保激活状态也保持不透明
+    }
+}
+
+.step-line {
+    flex: 1;
+    margin: 0 10px;
+    margin-top: -27px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background: var(--secondary-color);
+        height: 7px;
+        width: 90px;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    &.active {
+        &::before{
+            background: var(--secondary-dark-color);
+        }
+    }
+}
+
+.step-label {
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    line-height: 15px;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.tab-btn {
+    height        : 30px;
+    line-height   : 2%;
+    display       : flex;
+    flex-direction: row;
+    border-bottom : 2px solid #efefef;
+    margin-bottom : 10px;
+
+    .tab-btn-item {
+        font-size: 15px;
+        color    : #979797;
+        padding  : 0 15px;
+    }
+
+    .active {
+        color        : #979797;
+        border-bottom: 2px solid #979797;
+        font-size    : 18px;
+    }
+}
+
+.ant-input::placeholder {
+    color: #043804;
+    opacity: 1; /* Firefox 需要设置透明度 */
+  }
+
+.input-item {
+    font-size : 12px;
+    height    : 32px;
+    // left: 50%;
+    // transform: translate(-50%);
+    box-sizing: border-box;
+    margin    : 0 0 20px 0;
+    padding   : 0 8px;
+    position  : relative;
+
+    display        : flex;
+    // width: 80%;
+    flex-direction : row;
+    align-items    : center;
+
+    input {
+        height      : 32px;
+        padding     : 0;
+        font-size   : 14px;
+        text-align  : left;
+        flex        : 1;
+        padding-left: 14px;
+
+         // 禁用系统密码显示眼睛
+         &[type="password"]::-ms-reveal,
+         &[type="password"]::-ms-clear {
+             display: none;
+         }
+         
+         // Webkit浏览器（Chrome、Safari等）
+         &[type="password"]::-webkit-contacts-auto-fill-button,
+         &[type="password"]::-webkit-credentials-auto-fill-button,
+         &[type="password"]::-webkit-inner-spin-button,
+         &[type="password"]::-webkit-outer-spin-button {
+             display: none;
+         }
+         
+         // 隐藏密码显示眼睛
+         &[type="password"]::-webkit-text-security {
+             -webkit-text-security: disc;
+         }
+       
+    }
+
+    .input-verify {
+        position      : absolute;
+        width         : 110%;
+        height        : 16px;
+        line-height   : 16px;
+        left          : 0px;
+        bottom        : -22px;
+        color         : $theme-error-color;
+        font-size     : 12px;
+        display       : flex;
+        flex-direction: row;
+        align-items   : center;
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 6px;
+        }
+    }
+}
+
+.demo-tab {
+    position: absolute;
+    width   : 100%;
+    left    : 0px;
+    bottom  : -24px;
+
+    display        : flex;
+    flex-direction : row;
+    -ms-flex-pack  : justify;
+    justify-content: space-between;
+    color          : $theme-error-color;
+    font-size      : 12px;
+    box-sizing     : border-box;
+
+    span {
+        color: $theme-error-color;
+    }
+}
+
+.raa-demo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    span{
+        padding-left: 6px;
+    }
+}
+
+.bind-mobile {
+    height: 20px;
+    line-height: 20px;
+    font-size    : 12px;
+    color        : $theme-extra-color;
+    margin-left: 18px;
+}
+
+.otp-btn {
+    position: absolute;
+    right        : 1px;
+    width        : 55px;
+    height       : 25px;
+    font-size    : 12px;
+    border-radius: 60px;
+    font-weight: 600;
+    background-color: #FFCC00;
+}
+
+.otp-btn-lock {
+    position: absolute;
+    right        : 1px;
+    color           : #fff;
+    background-color: #949494;
+    background-image: none;
+    width           : 55px;
+    height          : 25px;
+    line-height     : 25px;
+    font-size       : 12px;
+    border-radius   : 60px;
+}
+
+
+.step-3 {
+    text-align: center;
+    .step-3-icon {
+        display: flex;
+        justify-content: center;
+    }
+
+    .step-3-content {
+        color     : $theme-base-color ;
+        text-align: center
+    }
+}
+
+.btn-submit {
+    height: 28px;
+}
+
+.captcha-container {
+    width: 100px;
+    height: 32px;
+}

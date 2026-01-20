@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="137" height="137.001" viewBox="0 0 137 137.001">
+  <defs>
+    <style>
+      .cls-2 {
+        filter: url(#路径_3);
+      }
+    </style>
+    <filter id="路径_3" x="0" y="0" width="137" height="137.001" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="rgba(0,0,0,0.5)"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组件_8_1" data-name="组件 8 – 1" transform="translate(22.5 22.5)">
+    <g class="cls-2" transform="matrix(1, 0, 0, 1, -22.5, -22.5)">
+      <path id="路径_3-2" data-name="路径 3" class="cls-1" d="M28.1,88.385A46.148,46.148,0,1,1,46,92,45.851,45.851,0,0,1,28.1,88.385ZM6.459,46A39.541,39.541,0,1,0,46,6.46,39.585,39.585,0,0,0,6.459,46ZM35.335,65.828c0-9.815-.164-28.432,0-38.08.224-3.6,2.569-4.421,5.355-2.381,6.8,4.821,18.737,12.6,25.321,17.8,5.122,4.188-.1,7.523-.059,7.555L40.666,68.5a4.856,4.856,0,0,1-2.469.773C36.67,69.271,35.428,68.241,35.335,65.828Z" transform="translate(22.5 22.5)"/>
+    </g>
+  </g>
+</svg>

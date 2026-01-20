@@ -1,0 +1,511 @@
+{
+  "funtions": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1011,
+    2015
+  ],
+  "activities": [
+    2001,
+    2002,
+    2014,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "hot": [
+    {
+      "id": 11113,
+      "gameName": 261113,
+      "gameId": "1695365",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1695365.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11028,
+      "gameName": 261028,
+      "gameId": "126",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90028.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11016,
+      "gameName": 261016,
+      "gameId": "98",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90016.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11100,
+      "gameName": 261100,
+      "gameId": "1543462",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90100.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11059,
+      "gameName": 261059,
+      "gameId": "68",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90059.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11106,
+      "gameName": 261106,
+      "gameId": "1568554",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1568554.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 12001,
+      "gameName": 262001,
+      "gameId": "vs20olympgate",
+      "GameType": 1,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/vs20olympgate.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 12002,
+      "gameName": 262002,
+      "gameId": "vs20sugarrush",
+      "GameType": 1,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/vs20sugarrush.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 13021,
+      "gameName": 263021,
+      "gameId": "49",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/49.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 14001,
+      "gameName": 994001,
+      "gameId": "14089",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/14089.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 14002,
+      "gameName": 994002,
+      "gameId": "14087",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/14087.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 14003,
+      "gameName": 994003,
+      "gameId": "14086",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/14086.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11107,
+      "gameName": 261107,
+      "gameId": "1594259",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1594259.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11108,
+      "gameName": 261108,
+      "gameId": "1555350",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1555350.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11109,
+      "gameName": 261109,
+      "gameId": "1580541",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1580541.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 12003,
+      "gameName": 262003,
+      "gameId": "vs20starlight",
+      "GameType": 1,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/vs20starlight.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 12004,
+      "gameName": 262004,
+      "gameId": "vs20fruitsw",
+      "GameType": 1,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/vs20fruitsw.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 13031,
+      "gameName": 263031,
+      "gameId": "103",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/103.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 13032,
+      "gameName": 263032,
+      "gameId": "109",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/109.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 14004,
+      "gameName": 994004,
+      "gameId": "14085",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/14085.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 14005,
+      "gameName": 994005,
+      "gameId": "14084",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/14084.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 14006,
+      "gameName": 994006,
+      "gameId": "14083",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/14083.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11110,
+      "gameName": 261110,
+      "gameId": "1655268",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1655268.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11111,
+      "gameName": 261111,
+      "gameId": "1615454",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1615454.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11112,
+      "gameName": 261112,
+      "gameId": "1451122",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1451122.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11058,
+      "gameName": 261058,
+      "gameId": "63",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90058.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11010,
+      "gameName": 261010,
+      "gameId": "57",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90010.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11033,
+      "gameName": 261033,
+      "gameId": "24",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90033.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 12006,
+      "gameName": 262006,
+      "gameId": "vs20sbxmas",
+      "GameType": 1,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/vs20sbxmas.png",
+      "best": 0,
+      "type": 1
+    }
+  ],
+  "jackPot": [
+    {
+      "id": 11113,
+      "gameName": 261113,
+      "gameId": "1695365",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/1695365.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11028,
+      "gameName": 261028,
+      "gameId": "126",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90028.png",
+      "best": 0,
+      "type": 1
+    },
+    {
+      "id": 11016,
+      "gameName": 261016,
+      "gameId": "98",
+      "GameType": 1,
+      "gameImg": "https://commres.brgames777.com/static/sprite_PGSoft/90016.png",
+      "best": 0,
+      "type": 1
+    }
+  ],
+  "slot": [],
+  "blockchain": [
+    {
+      "id": 13701,
+      "gameName": 992001,
+      "gameId": "224",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/224.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 13702,
+      "gameName": 992002,
+      "gameId": "229",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/229.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 13703,
+      "gameName": 992003,
+      "gameId": "232",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/232.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 13704,
+      "gameName": 992004,
+      "gameId": "233",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/233.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 13705,
+      "gameName": 992005,
+      "gameId": "235",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/235.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 13706,
+      "gameName": 992006,
+      "gameId": "236",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/236.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 14203,
+      "gameName": 996003,
+      "gameId": "9016",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/9016.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 13708,
+      "gameName": 992008,
+      "gameId": "241",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/241.png",
+      "best": 0,
+      "type": 3
+    },
+    {
+      "id": 14204,
+      "gameName": 996004,
+      "gameId": "9015",
+      "GameType": 4,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/9015.png",
+      "best": 0,
+      "type": 3
+    }
+  ],
+  "fishing": [
+    {
+      "id": 13901,
+      "gameName": 990001,
+      "gameId": "1",
+      "GameType": 2,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/1.png",
+      "best": 0,
+      "type": 4
+    },
+    {
+      "id": 13902,
+      "gameName": 990002,
+      "gameId": "20",
+      "GameType": 2,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/20.png",
+      "best": 0,
+      "type": 4
+    },
+    {
+      "id": 13903,
+      "gameName": 990003,
+      "gameId": "42",
+      "GameType": 2,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/42.png",
+      "best": 0,
+      "type": 4
+    },
+    {
+      "id": 13904,
+      "gameName": 990004,
+      "gameId": "32",
+      "GameType": 2,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JILISoft/32.png",
+      "best": 0,
+      "type": 4
+    },
+    {
+      "id": 14107,
+      "gameName": 995007,
+      "gameId": "7007",
+      "GameType": 2,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/7007.png",
+      "best": 0,
+      "type": 4
+    },
+    {
+      "id": 14108,
+      "gameName": 995008,
+      "gameId": "7009",
+      "GameType": 2,
+      "gameImg": "https://commres.brgames777.com/static/sprite_JDBSoft/7009.png",
+      "best": 0,
+      "type": 4
+    }
+  ],
+  "live": [
+    {
+      "id": 12601,
+      "gameName": 999001,
+      "gameId": "801",
+      "GameType": 6,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/801.png",
+      "best": 0,
+      "type": 5
+    },
+    {
+      "id": 12602,
+      "gameName": 999002,
+      "gameId": "1101",
+      "GameType": 6,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/1101.png",
+      "best": 0,
+      "type": 5
+    },
+    {
+      "id": 12603,
+      "gameName": 999003,
+      "gameId": "701",
+      "GameType": 6,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/701.png",
+      "best": 0,
+      "type": 5
+    },
+    {
+      "id": 12604,
+      "gameName": 999004,
+      "gameId": "204",
+      "GameType": 6,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/204.png",
+      "best": 0,
+      "type": 5
+    },
+    {
+      "id": 12605,
+      "gameName": 999005,
+      "gameId": "402",
+      "GameType": 6,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/402.png",
+      "best": 0,
+      "type": 5
+    },
+    {
+      "id": 12606,
+      "gameName": 999006,
+      "gameId": "401",
+      "GameType": 6,
+      "gameImg": "https://common-static.ppgames.net/game_pic/rec/325/401.png",
+      "best": 0,
+      "type": 5
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+有添加多语言时 在多语言文件中添加对应多语言 多语言的名字前面都加上f_ 多语言的key值不要出现中文

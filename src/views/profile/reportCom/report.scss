@@ -1,0 +1,184 @@
+.top-box {
+    width          : 100%;
+    // height         : 35px;
+    display        : flex;
+    justify-content: left;
+    align-items    : center;
+    padding-left        : 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.logs-list-title {
+    width      : 95%;
+    height     : 35px;
+    margin     : 0px 10px;
+    display    : flex;
+    align-items: center;
+    color      : $theme-text-color-dark;
+    background : $theme-table-title-bg;
+    border-radius: 10px 10px 0 0;
+
+    .title {
+        text-align: center;
+        font-size : 12px;
+        color: $theme-text-color-dark;
+    }
+}
+
+.logs-list-box {
+    width     : 95%;
+    margin    : 0 10px 0 10px;
+    overflow-y: auto;
+    height: calc(100vh - 335px);
+
+
+    .logs-item-box {
+        width        : 100%;
+        line-height  : 40px;
+        padding:10px 0 10px 0;
+        display      : flex;
+        align-items: center;
+
+        .logs-item {
+            line-height: 20px;
+            text-align: center;
+            color     : $theme-text-color-dark;
+            font-size : 12px;
+        }
+
+        //奇偶
+        &:nth-child(even) {
+            background: $theme-table-odd-bg;
+        }
+
+        &:nth-child(odd) {
+            background: $theme-table-even-bg;
+        }
+
+        &:last-child{
+            border-radius: 0 0 8px 8px;
+        }
+
+        .logs-light {
+            color: $theme-text-color-bright;
+        }
+    }
+}
+
+.top-info {
+    width     : 100%;
+    max-width : $max-width;
+    height    : 35px;
+
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 0 10px;
+
+    .left,
+    .right {
+        font-size: 14px;
+
+        span {
+            color       : var(--text-black);
+            padding-left: 8px;
+        }
+
+        i {
+            color       : var(--primary-color);
+            padding-left: 8px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    margin: 0 auto;
+    max-width: 499px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: white;
+    z-index: 1000;
+
+    .pagination-box {
+      position: relative;
+
+      $cancel-bg:transparent;
+      $submit-bg:transparent;
+      --pa-width: 25px;
+      --pa-height: 25px;
+      --pa-font-size: 12px;
+      --pa-space: 10px;
+
+      .pagination-first,
+      .pagination-last {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--pa-width);
+        height: var(--pa-height);
+        font-size: var(--pa-font-size);
+        color: var(--primary-color);
+        border-radius: 50%;
+        background: $cancel-bg;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+
+      .pagination-first {
+        left: calc(-1 * (var(--pa-width) + var(--pa-space)));
+      }
+
+      .pagination-last {
+        right: calc(-1 * (var(--pa-width) + var(--pa-space)));
+      }
+
+      --van-pagination-item-width: var(--pa-width);
+      --van-pagination-height: var(--pa-height);
+      --van-pagination-font-size: var(--pa-font-size);
+      --van-pagination-disabled-opacity: 1;
+
+      :deep(.van-pagination__item) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-color);
+        background: $cancel-bg;
+        background-size: 100% 100%;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: 600;
+        &:not(:last-child) {
+          margin-right: var(--pa-space);
+        }
+      }
+
+      :deep(.van-pagination__item--active) {
+        color: var(--primary-color);
+        background: $submit-bg;
+        background-size: 100% 100%;
+      }
+
+      :deep(.van-pagination__item--prev),
+      :deep(.van-pagination__item--next) {
+        color: var(--primary-color);
+      }
+
+      :deep(.van-hairline--surround):after {
+        border-width: 0;
+      }
+    }
+}

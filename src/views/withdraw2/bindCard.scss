@@ -1,0 +1,125 @@
+// 绑卡弹窗
+.bind-card-box {
+    width: 288px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+// 弹窗背景透明
+.popup-transparent {
+    background-color: transparent;
+}
+
+// 选择框容器样式
+.select-box-container {
+    z-index: 1000;
+    position: relative;
+}
+
+.bind-card-box {
+    .pix-title {
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--primary-color);
+        text-align: center;
+        padding: 15px 0 8px;
+    }
+
+    .select-container {
+        padding: 0 15px;
+    }
+
+    .input-verify {
+        position: relative;
+        width: calc(100% - 12px);
+        height: 16px;
+        line-height: 16px;
+        left: 6px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        z-index: 10;
+
+        span {
+            color: $theme-withdraw-action-color;
+            font-size: 12px;
+            width: 100%;
+            padding: 0 6px;
+        }
+    }
+
+    .input-item {
+        width: 100%;
+        height: 32px;
+        background: transparent;
+        border-radius: 4px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--primary-color);
+        position: relative;
+
+
+        .input-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .ant-input {
+            flex: 1;
+            height: 100%;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            color: $theme-text-color-dark;
+            outline: none;
+            
+            &::placeholder {
+                color: $theme-text-color-placeholder;
+            }
+        }
+    }
+
+    .verification-tip {
+        padding: 10px 0;
+        color: $theme-text-color-dark;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .next-button {
+        @extend .theme-btn;
+        width: 90%;
+        height: 35px;
+        line-height: 50px;
+        margin: 0px auto 0;
+      
+       
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        
+        &.disabled {
+           background: $theme-btn-disable-bg;
+           color: white;
+        }
+    }
+}
+
+// 添加自定义overlay样式
+:deep(.withdraw-custom-overlay) {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+

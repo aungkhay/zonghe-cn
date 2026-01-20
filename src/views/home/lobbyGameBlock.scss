@@ -1,0 +1,39 @@
+.game-box {
+  width: 100%;
+
+  .game-header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    .game-tab {
+      position: relative;
+      display    : flex;
+      align-items: center;
+      img {
+        height: 24px;
+        width: 100%;
+      }
+    }
+
+    .btn-all {
+      color: $theme-text-color-dark;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .game-list {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows   : auto;
+    gap                  : 7px;
+    // margin-top           : 15px;
+  }
+  .game-list2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows   : auto;
+    gap                  : 10px;
+  }
+}

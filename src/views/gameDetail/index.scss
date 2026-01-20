@@ -1,0 +1,48 @@
+.game-detail-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+
+  :deep(.van-floating-bubble) {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 0 1px #5b4232, 1px 0 #5b4232, -1px 0 #5b4232, 0 -1px #5b4232;
+    font-family: "Microsoft Yahei";
+    background: none;
+    border-radius: 0;
+    white-space: nowrap;
+    overflow: visible;
+    z-index: 2;
+  }
+
+  .back-home {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
+
+    img {
+      width: 50px;
+
+      &.b {
+        left: auto;
+        right: 10px;
+        transform: scale(1);
+      }
+    }
+  }
+  .back-b{
+    // position: absolute;
+    left: 20px;
+    top: 0;
+  }
+}

@@ -1,0 +1,128 @@
+.van-skeleton{
+  padding: 0;
+}
+.game-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  
+  .van-skeleton-image{
+    width: 110px;
+    height: 110px;
+  }
+  .icon-best {
+    padding: 3px 6px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: $theme-best-color;
+    background: $theme-best-bg;
+    border-radius: 8px;
+    z-index: 6;
+  }
+
+  .game-item-content {
+    position: relative;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 4 / 5;
+
+    .game-item-img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 12px;
+      // transform: scale(1.1);
+      &:hover {
+        ~ .game-item-enter {
+          top: 0;
+        }
+      }
+    }
+
+   .gameStar{
+     position: absolute;
+     top: 10px;
+     right: 10px;
+   }
+    .game-item-enter {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      // background: $theme-mask-bg;
+      z-index: 5;
+      transition: top 0.1s ease-in-out;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        top: 0;
+      }
+    }
+  }
+  .game-item-bottom {
+    padding: 5px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // height: 24px;
+    font-size: 14px;
+    color: #000;
+    z-index: 3;
+    font-weight: 200;
+
+    span {
+      text-align: center;
+      flex: 1;
+      display: block;           /* or inline-block */
+      // max-width: 75px;          /* must have a width constraint */
+      // white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // font-size: 12px;
+    }
+  }
+
+}
+
+.game-item-2 {
+  .game-item-content {
+    .game-item-img {
+      height: 152px;
+    }
+
+    .game-item-bottom {
+      padding: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      background: white;
+    }
+  }
+}
+
+.game-name-item {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  span{
+    font-size: 12px;
+    color: white;
+    text-align: center;
+  }
+}

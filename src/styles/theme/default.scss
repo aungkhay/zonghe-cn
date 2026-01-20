@@ -1,0 +1,504 @@
+// 定义基础图片路径
+$img-base-path: "/static/default" !default;
+
+// 定义页面最大宽度
+$max-width: 499px;
+
+:root:root {
+  // vant顶部菜单样式覆盖
+  --van-tabs-line-height: 35px;
+  --van-nav-bar-height: 50px;
+  --app-background: #f7f7f7;
+  --nav-bar-background: #ffffff;
+  --bottom-bar-background: #0f1325;
+  --primary-color: #597EF7;
+  --primary-disabled-color: #b1c4ff;
+  --primary-soft-color: #8ba6ff;
+  --secondary-color: #e9e9e9;
+  --secondary-dark-color: #bebebe;
+  --border-color: #d8d8d8;
+  --text-black: #000;
+  --text-white: #fff;
+  --content-description: #2e2e2e;
+  --grey-text: #5A6680;
+}
+
+#app {
+  max-width: $max-width;
+  position: relative;
+  background: var(--app-background);
+  margin-left: auto;
+  margin-right: auto;
+  
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%; // 图片高度，可以根据实际图片调整
+  //   background-image: url('#{$img-base-path}/home/app_bg.png');
+  //   background-repeat: repeat;
+  //   background-size: 90px 90px;
+  //   pointer-events: none;
+  //   z-index: 0;
+  // }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 819px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: calc(100% - 820px);
+  //   background: linear-gradient( 180deg, #FFAE70 30%, #FFDDA5 35%);
+  //   pointer-events: none;
+  //   z-index: -1;
+  // }
+
+}
+
+// 文字颜色
+$theme-text-color-light: #84abe9; // 浅色色
+$theme-text-color-dark: #4588f3 ; // 暗色
+$theme-text-color-bright: #F8A40D; // 亮色
+$theme-text-color-middle: #C0DECF; // 中色
+$theme-text-color-placeholder: #d1e3ff ;
+$theme-error-color : #ea4e3d; //错误警告文字
+$theme-agree-link-color: $theme-text-color-light;
+$theme-profile-text-color: #C49552;
+
+
+
+
+
+// svg通用色值
+.theme-svg-color {
+  color: #4588f3;
+}
+
+.theme-svg-color-light{ //副颜色
+   color: white;
+}
+// 顶部导航栏
+$theme-nav-top-bg : #161a34; // 顶部导航背景色
+$theme-nav-top-money-bg : $theme-text-color-bright; //首页顶部金币bg
+$theme-nav-top-border-color : #161a34; //顶部导航栏边框颜色
+$theme-nav-top-charge-btn-bg : $theme-text-color-dark; //顶部导航栏充值按钮bg
+$theme-nav-top-text-bg: $theme-text-color-middle;
+$theme-bottom-bar-bg: #0f1325;
+.theme-svg-color-dark{ //副颜色
+  color: $theme-text-color-dark;
+}
+
+// 底部导航栏
+.theme-tabbar-bg {
+  background: var(--app-background);
+  // box-shadow: 0px -4px 1px 0px rgba(0,0,0,0.05);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+} 
+
+
+// 游戏tab
+.theme-game-tab-bg,
+.theme-game-tab-bg-ac {
+  background: #232a57;
+  border-radius: 10px;
+}
+.theme-game-tab-bg-ac {
+  position: relative;
+  background: #3c499c;
+  border: 1px solid #6779f3;
+}
+
+// 热门游戏更多按钮
+.theme-popular-more-btn {
+  // background: $theme-nav-top-border-color;
+  background: transparent;
+  height: 28px;
+  border-radius: 14px;
+}
+
+// 金币增长
+.theme-money-grow-bg {
+  background: url("#{$img-base-path}/home/money_get1.png") no-repeat center;
+  background-size: 100% 100%;
+  width: 355px;
+  height: 84px;
+}
+
+.theme-money-grow-text {
+  font-weight: 800;
+  font-size: 20px;
+  color: #FFFF6B;
+}
+
+.theme-left-menu-bg {
+  background: var(--nav-bar-background);
+}
+
+// 文本框背景
+.theme-text-window-bg { 
+  // background: rgba(70,31,10,0.6);
+  background: #232a57;
+  // border-radius: 10px;
+}
+
+$theme-btn-disable-bg : #979797;
+
+//充值弹窗
+$theme-recharge-dark-line : $theme-text-color-dark ;
+$theme-recharge-light-line : #6E3ED6;
+$theme-recharge-border-color : $theme-text-color-dark;
+$theme-recharge-item-border-color :  $theme-recharge-border-color;
+$theme-recharge-item-border-ac-color : $theme-recharge-border-color;
+$theme-recharge-vip-badge-bg : #FF0E58;
+$theme-recharge-btn-bg : #D560FF;
+
+//表格
+$theme-table-title-bg:  #441F94;
+$theme-table-even-bg:  transparent;
+$theme-table-odd-bg:  $theme-table-title-bg;
+
+
+// 通用弹窗背景
+.popup-bg {
+  position: relative;
+  // background: url('#{$img-base-path}/public/popup_bg.png') no-repeat center;
+  // background-size: 100% 100%;
+  background: var(--secondary-color);
+  border-radius: 10px 10px 10px 10px;
+  // border: 1px solid $theme-nav-top-border-color;
+  z-index: 0;
+}
+
+.popup-bg2{
+  // background: linear-gradient( 180deg, #FFEAC4 0%, #FFCE66 100%);
+  // border-radius: 10px 10px 10px 10px;
+  background: var(--app-background);
+  border-radius: 8px 8px 8px 8px;
+}
+
+// 输入框
+.theme-input-box {
+  width: 100%;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  // border: 1px solid $theme-nav-top-border-color;
+
+  &::placeholder {
+    color: #6d6d6d;
+  }
+  input {
+    color: #000000;
+    &::placeholder {
+      color: #6d6d6d;
+    }
+  }
+}
+
+
+.theme-btn-submit,
+.theme-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 35px;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+}
+
+.theme-btn-submit{
+  background: #FFDC8F;
+  color: var(--primary-color);
+}
+
+//forgotPwd
+$theme-forgot-circle-bg: $theme-nav-top-border-color;
+$theme-forgot-line-bg: #C29C5E;
+
+
+//NavBar
+$theme-nav-bar-bg: $theme-nav-top-bg;
+
+//newActivities
+$theme-new-activities-title-color: $theme-text-color-dark;
+$theme-new-activities-title-color-ac: $theme-nav-bar-bg;
+.theme-dark-tip-bg {
+  background: rgba(0,0,0,0.36);
+  border-radius: 4px 4px 4px 4px;
+}
+
+//profile
+.theme-profile-bg {
+  background: var(--nav-bar-background);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.theme-profile-bg2 {
+  background: #2B0977;
+  // border-radius: 10px 10px 10px 10px;
+}
+.theme-profile-vip-box-bg{
+  background: #24B299;
+  border-radius: 6px 6px 6px 6px;
+}
+$theme-profile-vip-box-bg-text-color:#E0C465;
+
+$theme-profile-vip-box-text-color: $theme-nav-bar-bg;
+.theme-profile-vip-box-line{
+   background: rgba(0, 0, 0, 0.2);
+}
+.theme-profile-vip-text-color{
+  color: #E0C465;
+}
+
+
+//agent
+.theme-agent-bg{
+  // background: rgba(70,31,10,0.6);
+  background: $theme-nav-top-bg;
+  border-radius: 8px 8px 8px 8px;
+  // border: 1px solid #FFFFFF;
+}
+
+.theme-agent-bg-small{
+  // background: rgba(70,31,10,0.6);
+  background: $theme-nav-top-bg;
+  border-radius: 4px 4px 4px 4px;
+}
+$theme-agent-text-color-active: $theme-nav-bar-bg;
+
+.theme-agent-person-bg{
+  // background: rgba(70,31,10,0.6);
+  background: $theme-nav-top-bg;
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid $theme-text-color-dark;
+}
+
+.theme-agent-indexQR-bg{
+  background: $theme-nav-top-bg;
+  border-radius: 8px 8px 8px 8px;
+}
+
+$theme-indexQR-medal-number-color: #B47A07;
+$theme-indexQR-value-color: $theme-nav-bar-bg;
+.theme-indexQR-receive-btn-bg{
+   background-color: var(--primary-color);
+   color: var(--text-white);
+}
+
+.theme-indexQR-receive-btn-disabled{
+  background-color: #D9D9D9;
+  color: #000;
+}
+
+.theme-indexRefer-tab-bg{
+  color: $theme-text-color-light;
+  background: transparent;
+  border: 1px solid $theme-text-color-dark;
+}
+
+.theme-indexRefer-tab-bg-ac{
+  background: $theme-text-color-dark;
+  color: white;
+  border:none;
+}
+
+.theme-indexRefer-data-card-bg{  
+  background: $theme-bottom-bar-bg;
+  border-radius: 10px 10px 10px 10px;
+}
+
+$theme-indexRefer-data-card-gold-color: #FEBD62;
+
+.theme-allData-search-bg{
+  background: var(--primary-color);
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+}
+
+.theme-allData-float-btn-bg{
+  background: var(--primary-color);
+  border-radius:50%;
+  border: 1px solid var(--primary-color);
+}
+
+.theme-allData-summary-bg{
+  background: $theme-nav-top-bg;
+  box-shadow: 0px -3 6px 0px rgba(0,0,0,0.2);
+  border-radius: 16px 16px 0px 0px;
+}
+
+$theme-allData-table-odd-bg: $theme-nav-top-bg;
+$theme-allData-table-even-bg: transparent;
+$theme-allData-table-date-color: white;
+$theme-allData-table-pink-color: white;
+$theme-allData-table-item-bg: $theme-text-color-bright;
+$theme-allData-filter-option-bg-ac:  $theme-text-color-dark;
+.theme-allData-filter-filter-btn{
+  background: $theme-allData-filter-option-bg-ac;
+  color: white;
+}
+
+.theme-allData-filter-reset-btn{
+  background: $theme-btn-disable-bg;
+  color: white;
+}
+$theme-chest-reward-bg:  $theme-nav-top-bg;
+$theme-chest-reward-bg2: $theme-recharge-dark-line;
+$theme-chest-node-text-rect-bg: #E2E2E2;
+$theme-chest-node-opened-bg: #D63F2C;
+
+$theme-game-list-header-bg: #441F94;
+$theme-game-list-side-bar-bg: $theme-game-list-header-bg;
+$theme-game-list-side-bar-item-bg: #340E7E;
+$theme-game-list-side-bar-item-active-bg: $theme-text-color-dark;
+
+
+$theme-vip-info-bg: $theme-chest-reward-bg;
+$theme-vip-info-title-bg: #FF6625;
+$theme-vip-info-logo-text-color: #FF8800;
+$theme-vip-btn-bg-disabled:  gray;
+$theme-vip-line-color: $theme-text-color-light;
+$theme-vip-tab-text-color: white;
+
+
+$theme-withdraw-pin-input-bg: $theme-nav-top-bg;
+$theme-withdraw-action-color:#FFAA09;
+
+.theme-withdraw-bg{
+  background: var(--secondary-color);
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid var(--secondary-dark-color)
+}
+
+$theme-withdraw-divider-color:rgba(255,245,232,0.2);
+$theme-withdraw-btn-bg: #FFDC8F;
+
+.theme-withdraw-add-account-bg{
+  background: white;
+  border-radius: 10px 10px 10px 10px;
+  // border: 1px solid var(--primary-color);
+}
+$theme-withdraw-account-item-bg-ac: $theme-text-color-dark;
+$theme-withdraw-add-card-dropdown-bg: $theme-nav-top-bg;
+
+
+
+
+
+
+// ==============================历史遗留========================================
+
+$theme-progress-bg : #3A1C98; //进度条bg
+//文字色
+$theme-main-color : #FF24B6 ; // 主要文字
+$theme-title-color : #FFF1AD;// 标题文字
+$theme-title-color2 : #533726 ;//login次文字
+$theme-base-color : #FFF; // 常规文字
+$theme-secondary-color : #533726; //次要文字
+$theme-extra-color : #231818; // 辅助说明
+$theme-select-ac-color : $theme-text-color-dark;
+$theme-tab-text : #999999;
+$theme-page-color: #533726;  //分页文字
+// svg
+
+
+
+// 消息提示
+$theme-dot-bg : #ff5045; // 消息提示背景色
+$theme-dot-color: #fff; // 消息提示文字颜色
+
+// 按钮字体颜色
+$theme-submit-color : #533726 ;
+$theme-cancel-color : #533726 ;
+
+// best
+$theme-best-bg : linear-gradient(0deg, #ff5a83 0%, #9a0016 100%);
+$theme-best-color : #fff; // best文字颜色
+
+// 遮罩层背景
+$theme-mask-bg : rgba(0, 0, 0, 0.5);
+
+
+// van-button初始化样式
+.theme-button-default {
+  padding: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+
+  :deep(.van-button__text) {
+    position: relative;
+  }
+}
+
+.theme-btn-submit-large {
+  @extend .theme-btn-submit;
+  background-size: 100% 100%;
+}
+
+.theme-btn-cancel {
+  @extend .theme-btn;
+  background: $theme-nav-top-money-bg;
+  color: $theme-cancel-color;
+}
+
+// 通用弹窗标题
+.theme-popup-title-bg {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: $theme-text-color-dark;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 18px;
+  span {
+    flex: 1;
+    padding-left: 38px;
+  }
+}
+
+// 个人信息VIP进度条
+.vip-progress-color {
+  --van-progress-color : url("#{$img-base-path}/info/icon_Progress bar.png") no-repeat center;
+  --van-progress-pivot-text-color: #7232dd;
+  background: $theme-progress-bg; // 背景颜色
+  border-radius: 8px;
+}
+
+.vip-progress-bg {
+  width: 100%;
+  padding: 4px;
+  background: #6D42C2;
+  border-radius: 8px;
+}
+
+.vip-progress-bg2 {
+  width: 100%;
+  padding: 4px;
+  background : url("#{$img-base-path}/vip/Progress_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+//VIP进度条2
+.vip-progress-color-2 {
+  --van-progress-color : url("#{$img-base-path}/vip/bg_progress bar.png") no-repeat center; // 进度条颜色
+  --van-progress-pivot-text-color: #7232dd;
+  background: #B76E18; // 背景颜色
+}
+
+
+
+
+

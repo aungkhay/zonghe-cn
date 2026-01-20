@@ -1,0 +1,111 @@
+$brgamesBoxWidth: 250px;
+$brgamesBoxHeight: 70px;
+
+.brgames-box {
+  padding-top: 10px;
+  top: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: $brgamesBoxWidth;
+  height: $brgamesBoxHeight;
+  background: $theme-mask-bg;
+  border-radius: 0px 0px 18px 18px;
+  z-index: 10;
+
+  &.b {
+    top: -16px;
+    // top: calc(($brgamesBoxWidth - $brgamesBoxHeight) / 2 + 50%);
+    left: 15%;
+    // right: calc(-1 * (($brgamesBoxWidth - $brgamesBoxHeight) / 2));
+    transform: scale(0.5);
+  }
+
+  .brgames-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    .submit{
+      font-size: 12px;
+      padding-left: 13px;
+      font-weight: 600;
+      width: 75px !important;
+      height: 22px !important;
+      background: url("#{$img-base-path}/public/game-btn.png")no-repeat center;
+      background-size   : 100% 100%;
+    }
+    .disbaled{
+        @extend .submit;
+        background: url("#{$img-base-path}/public/game-btn-disabled.png")no-repeat center;
+        background-size   : 100% 100%;
+    }
+    .gold {
+      margin-right: 25px;
+      font-weight: 700;
+      font-size: 20px;
+      color: $theme-title-color2;
+    }
+
+    .theme-btn-submit {
+      width: 67px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+
+  .brgames-bottom {
+    margin-top: 5px;
+    color: $theme-title-color;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .proccess-main {
+    width: 85%;
+    margin-left: 8%;
+    .title {
+        font-weight    : 600;
+        font-size      : 14px;
+        color          : white;
+        display        : flex;
+        justify-content: space-between;
+    }
+
+    i {
+        color     : $theme-extra-color;
+        font-size : 12px;
+        font-style: normal;
+        padding   : 0 2px;
+    }
+
+    .progress-box {
+        flex      : 1;
+        position  : relative;
+        height    : 12px;
+        margin-top: 2px;
+
+        span {
+            right      : 10px;
+            top        : 2px;
+            z-index    : 2;
+            position   : absolute;
+            color      : $theme-base-color;
+            font-size  : 12px;
+            font-weight: 600;
+        }
+
+        .vip-progress-recharge {
+            height: 12px;
+            @extend .vip-progress-color;
+            background: none;
+        }
+
+        .vip-progress-bet {
+            height: 12px;
+            @extend .vip-progress-color-2;
+        }
+    }
+}
+}

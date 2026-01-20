@@ -1,0 +1,572 @@
+// 通用工具类
+.box-center {
+  width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.m-left {
+  margin-left: 20px;
+}
+
+// 顶部VIP信息区域
+.top-box {
+  @extend .box-center;
+  background-size: 100% 100%;
+  position: relative;
+  width: 359px;
+  height: 92px;
+  background: var(--secondary-dark-color);
+  border-radius: 8px 8px 8px 8px;
+
+  .vip-info {
+    flex-direction: column;
+    padding: 24px 10px 10px 20px;
+
+    .vip-info-title {
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 72px; 
+      height: 20px; 
+      border-radius: 8px 0px 8px 0px; 
+      z-index: 1; 
+      background: $theme-vip-info-title-bg; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+
+      span {
+         width: 72px; 
+         height: 12px; 
+         font-weight: 500; 
+         font-size: 10px; 
+         color: white;
+         text-align: center; 
+         font-style: normal; 
+         text-transform: none; 
+         display: inline-block; 
+         line-height: 12px;
+      }
+    }
+
+    .my-vip-level-label {
+      white-space: nowrap;
+      height: 15px;
+      font-weight: 550;
+      font-size: 13px;
+      color: $theme-vip-info-logo-text-color;
+      text-align: center;
+      font-style: normal;
+      text-transform: none;
+    }
+
+    .right {
+      width: 82px;
+      height: 26px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+      span {
+        width: 72px;
+        height: 13px;
+        font-weight: 500;
+        font-size: 11px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        display: inline-block;
+        line-height: 13px;
+      }
+    }
+
+    .vip-info-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: #000;
+      margin-right: 6px;
+    }
+
+    .next-vip-text {
+      font-weight: 600;
+      margin-top: 0px;
+      margin-left: 52px;
+      font-size: 14px;
+      :deep(.money) {
+        padding: 0 2px;
+      }
+    }
+  }
+}
+
+// VIP信息区域相关样式
+.top-box-margin {
+  margin-top: 10px;
+}
+
+.vip-logo-container {
+  position: absolute;
+  top: 27px;
+  left: 16px;
+}
+
+.vip-logo {
+  height: 40px;
+}
+
+.vip-level-position {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.next-vip-text-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vip-info-align {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.vip-level {
+  vertical-align: middle;
+  font-weight: 1000;
+  font-size: 12px;
+  color: var(--primary-color);
+  font-style: italic;
+  text-transform: none;
+  transform: translateY(-2px);
+}
+
+.next-bet-num {
+  font-size: 12px; 
+  color: var(--primary-color); 
+  text-align: left; 
+  font-style: normal; 
+  text-transform: none;
+}
+
+// 按钮状态样式
+.right-active {
+  background: var(--primary-color);
+}
+
+.right-inactive {
+  background: $theme-vip-btn-bg-disabled;
+}
+
+.active-text-color {
+  color: white;
+}
+
+.inactive-text-color {
+  color: white;
+}
+
+// 标题样式
+.title1 {
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+// VIP选项卡样式
+.vip-tabs {
+  width: 499px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vip-tabs-margin {
+  margin-bottom: 10px;
+}
+
+.vip-tab-header {
+  @extend .m-left;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow-x: scroll;
+  white-space: nowrap;
+  height: 43px;
+}
+
+.vip-tab-item {
+  flex: 1;
+  padding: 10px 0;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 11px;
+  color: #000;
+  text-align: center;
+  text-transform: none;
+
+  &.active {
+    font-weight: bold;
+    font-size: 11px;
+    color: var(--primary-color);
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+  }
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.tab-divider {
+  width: 100%;
+  height: 0.5px;
+  background: var(--secondary-color);
+  margin: -1px 0;
+}
+
+// VIP列表内容区域
+.vip-tab-content {
+  width: 499px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vip-list {
+  padding: 0 10px 100px 10px;
+}
+
+.vip-list-padding {
+  padding: 0 0 0px 0px;
+}
+
+.vip-list-header {
+  display: flex;
+  padding: 8px 5px;
+  background: var(--secondary-dark-color);
+  // border-radius: 8px 8px 0 0;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.vip-list-cell {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  color: black;
+
+  &.even {
+    color: $theme-text-color-dark;
+  }
+}
+
+.vip-list-rows {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 0;
+
+ 
+}
+
+.vip-list-row {
+  display: flex;
+  padding: 6px 5px;
+  align-items: center;
+  height: 45px;
+}
+
+.vip-list-rows .vip-list-row:nth-child(even) {
+  background: transparent;
+}
+
+.vip-list-rows .vip-list-row:nth-child(odd) {
+  background: var(--secondary-color);
+}
+
+.active-row {
+  border: 1px solid var(--primary-color);
+}
+
+// 列表列布局
+.vip-list-header, .vip-list-row {
+  &.four-columns {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr;
+    gap: 5px;
+  }
+}
+
+// 信息图标样式
+.with-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.info-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  font-size: 9px;
+}
+
+.info-icon-color {
+  color: white;
+}
+
+// VIP等级相关样式
+.level-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.level-container {
+  position: relative;
+}
+
+.level-logo {
+  height: 30px;
+}
+
+.level-label-position {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 11px;
+  color: $theme-text-color-bright;
+  text-align: center;
+  font-style: normal;
+  text-transform: none;
+}
+
+// 进度条相关样式
+.progress-container {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 3px;
+}
+
+.progress-value {
+  font-size: 10px;
+  color: var(--primary-color);
+}
+
+.progress-bar {
+  height: 9px;
+  background: var(--primary-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-relative {
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: $theme-text-color-dark;
+  border-radius: 3px;
+}
+
+.progress-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  color: white;
+  white-space: nowrap;
+  font-size: 9px;
+}
+
+// 奖励和特权样式
+.bonus-value {
+  color: var(--primary-color);
+}
+
+.privilege-name {
+  font-weight: 600;
+  color: $theme-text-color-dark;
+}
+
+.privilege-value {
+  color: $theme-text-color-dark;
+  font-weight: bold;
+}
+
+// VIP表格样式（隐藏）
+.vip-table {
+  @extend .box-center;
+  margin-top: 10px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: $theme-text-color-dark;
+  }
+
+  .table-box {
+    margin: 0 10px;
+    margin-top: 10px;
+    max-height: 460px;
+    overflow-y: auto;
+
+    .table-item {
+      position: relative;
+      padding: 5px;
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      color: $theme-base-color;
+
+      .item {
+        padding: 10px 0;
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+
+        span:first-child {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 34px;
+          color: $theme-main-color;
+        }
+      }
+
+      .bg-second {
+       
+        border-radius: 12px;
+      }
+
+      .bg-third {
+       
+        border-radius: 12px;
+      }
+    }
+
+    .actable {
+      border: 3px solid $theme-text-color-dark;
+
+      .vptext {
+        color: $theme-main-color;
+      }
+    }
+
+    .rechargeProgress {
+      margin-top: 2px;
+      border-top: 1px solid white;
+      padding: 7px 20px 15px;
+
+      .title {
+        font-size: 12px;
+        color: $theme-base-color;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      i {
+        color: $theme-extra-color;
+        font-size: 12px;
+        font-style: normal;
+        padding: 0 2px;
+      }
+
+      .progress-box {
+        flex: 1;
+        position: relative;
+        height: 12px;
+        margin-top: 2px;
+
+        span {
+          right: 10px;
+          top: 2px;
+          z-index: 2;
+          position: absolute;
+          color: $theme-base-color;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .vip-progress-recharge {
+          height: 12px;
+          @extend .vip-progress-color;
+          background: none;
+        }
+
+        .vip-progress-bet {
+          height: 12px;
+          @extend .vip-progress-color-2;
+        }
+      }
+    }
+  }
+}
+
+.vip-table-hidden {
+  display: none;
+}
+
+// 底部内容区域
+.bottom-sm {
+  @extend .box-center;
+  min-height: 100px;
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 30px;
+  background-color: var(--secondary-color);
+
+  .title {
+    color: var(--primary-color);
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .content {
+    color: #474747;
+    font-size: 14px;
+    padding: 0 10px 100px 10px;
+  }
+}

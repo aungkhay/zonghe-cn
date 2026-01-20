@@ -1,0 +1,204 @@
+$box-width: 355px;
+
+.refer-box {
+  margin-top: 1px;
+  position: relative;;
+  .tab-box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    max-width: 100%;
+    background: var(--app-background);
+   
+    
+    :deep(.van-tab) {
+      // @extend .theme-indexRefer-tab-bg;
+      border: 1px solid var(--primary-color);
+      flex: none;
+      padding: 5px 20px;
+      text-align: center;
+     
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+
+    :deep(.van-tab--active) {
+      // @extend .theme-indexRefer-tab-bg-ac;
+      background-color: var(--primary-color);
+      color: var(--text-white);
+    }
+
+    :deep(.van-tabs__wrap) {
+      overflow-x: auto;
+    }
+
+    .search-list-box {
+      width: 100%;
+      --van-tabs-bottom-bar-color: none;
+      --van-tabs-nav-background: none;
+    }
+  }
+
+  .rule-popup {
+    width: $box-width;
+    background: white;
+    border: 1px solid white;
+    border-radius: 5px;
+
+    .rule-content {
+      padding: 15px 15px 0;
+      height: 200px;
+      font-size: 13px;
+      color: $theme-base-color;
+      overflow-y: auto;
+    }
+
+    .submit-btn {
+      margin: 20px auto;
+      width: 200px;
+    }
+  }
+}
+
+.data-cards-section {
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.data-card {
+  // @extend .theme-indexRefer-data-card-bg;
+  background-color: var(--secondary-dark-color);
+  // background: linear-gradient(var(--primary-color), #000);
+  border-radius: 8px;
+  flex: 1;
+  display: flex;
+  width: 110px;
+  height: 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.card-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-value.money {
+  font-size: 18px;
+}
+
+.card-value.gold, .stat-value.gold {
+  color: $theme-indexRefer-data-card-gold-color;
+}
+
+.data-overview-section {
+  // @extend .theme-indexRefer-data-card-bg;
+  border-radius: 8px;
+  background-color: var(--secondary-dark-color);
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.section-title {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.team-data {
+  margin-bottom: 15px;
+}
+
+.team-title {
+  // color: $theme-text-color-light;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.team-stats {
+  display: flex;
+  padding-top: 8px;
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 8px;
+  //子元素间竖的分隔符
+  
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  border-right: 1px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column; /* 纵向排列 */
+  justify-content: space-between;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+
+/* 响应式底部边距 */
+.bottom-spacing {
+  height: 15vh; /* 默认使用视口高度的15% */
+  min-height: 100px; /* 最小高度100px */
+  max-height: 200px; /* 最大高度200px */
+}
+
+/* 小屏幕设备 */
+@media (max-height: 600px) {
+  .bottom-spacing {
+    height: 12vh;
+    min-height: 80px;
+  }
+}
+
+/* 大屏幕设备 */
+@media (min-height: 800px) {
+  .bottom-spacing {
+    height: 18vh;
+    max-height: 250px;
+  }
+}
+
+/* 超大屏幕设备 */
+@media (min-height: 1000px) {
+  .bottom-spacing {
+    height: 20vh;
+    max-height: 300px;
+  }
+}

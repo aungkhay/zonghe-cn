@@ -1,0 +1,15 @@
+/**
+ * @param {string} path
+ * @returns {Boolean}
+ */
+export function isExternal(path: string) {
+  return /^(https?:|mailto:|tel:)/.test(path);
+}
+
+/**
+ * @param {string} str
+ * @returns {Boolean}
+ */
+export function isPureNumber(str: string) {
+  return /^\d+$/.test(str);
+}

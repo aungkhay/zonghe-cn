@@ -1,0 +1,283 @@
+.main-box {
+  padding   : calc(var(--van-nav-bar-height) + 0px) 0px 120px 0px;
+  box-sizing: border-box;
+  min-height: 100%;
+
+  // 轮播图
+  .swipe-boxs{
+    padding: 0 10px;
+  }
+  .swipe-box {
+    margin                      : 0 auto;
+    width                       : 100%;
+    max-width                   : 600px;
+    border-radius               : 6px;
+    --van-swipe-indicator-margin: 5px;
+    img {
+      width : 100%;
+      height: 100%;
+    }
+  }
+
+  // 广播公告
+  .notice-box {
+    padding: 10px;
+    display    : flex;
+    align-items: center;
+    width      : 100%;
+    height     : 30px;
+    position:  relative;
+
+    .notice {
+      color          : var(--grey-text);
+      width          : 100%;
+      background-color: transparent;
+    }
+  }
+
+  // 游戏tab
+  .game-tab-box-new {
+    width: 100%;
+    position: relative;
+    z-index: 1000; // higher than any sticky header layers
+    padding-top: 10px;
+    overflow-x: auto;
+    &.is-sticky {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: var(--nav-bar-background);
+    }
+
+
+
+    .game-tab-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-left: 10px;
+      padding-right: 30px; // More buffer on right
+      scroll-padding-right: 0px;
+      // gap: 0px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex-wrap: nowrap;
+      user-select: none;
+      position: relative;
+    //  border-bottom: 1px solid #4588f3;
+      z-index: 1001; // ensure above siblings
+      height: 80px;
+
+      .game-tab-item-container {
+        background-color: var(--secondary-color);
+        margin-top: 10px;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        margin-right: -20px;
+
+        &.active {
+          border: 2px solid var(--border-color);
+        }
+      }
+
+    }
+
+    
+
+
+  .game-tab-list::-webkit-scrollbar {
+    display: none; // hide scrollbar on Webkit
+  }
+
+//   .game-tab-item:last-child {
+//   margin-right: 20px;
+// }
+
+
+    .game-tab-item {
+      position: relative;
+     // flex-shrink: 0;
+       flex: 0 0 auto; // prevents items from shrinking
+      //  @extend .theme-game-tab-bg;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      // padding-left: 10px;
+      // padding-right: 10px;
+      //  width: 100px;
+        height: 45px;
+      // z-index: 1111;
+      padding-bottom: 10px;
+       transition: border-color 0.3s ease, border-width 0.3s ease;
+        // border-bottom: 1px solid transparent;
+        // background-color: red;
+      &.active {
+        // @extend .theme-game-tab-bg-ac;
+           border-bottom: 1px solid #4588f3;
+         
+      }
+
+      .game-tab-item-text{
+          pointer-events: none; // let the parent handle clicks cleanly
+
+        font-weight: 400;
+        font-size: 12px;
+        color: $theme-text-color-light;
+        transition: border-color 0.3s ease;
+        &.active{
+          color: $theme-text-color-dark;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  --van-padding-md: 0;
+  .main-game{
+    padding: 0 0;
+  }
+  
+  .game-list {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows   : auto;
+    gap                  : 50px;
+    margin-top           : 10px;
+    
+    .game-item {
+      position: relative;
+
+      .van-skeleton-image {
+        width : 110px;
+        height: 110px;
+      }
+
+      .icon-best {
+        padding      : 3px 6px;
+        position     : absolute;
+        left         : 0;
+        top          : 0;
+        font-size    : 10px;
+        font-weight  : 700;
+        color        : $theme-best-color;
+        background   : $theme-best-bg;
+        border-radius: 8px;
+        z-index      : 6;
+      }
+
+      .game-item-content {
+        position     : relative;
+        background   : white;
+        border-radius: 12px;
+        overflow     : hidden;
+
+        .game-item-img {
+          width : 100%;
+          height: 110px;
+          cursor: pointer;
+
+          &:hover {
+            ~.game-item-enter {
+              top: 0;
+            }
+          }
+        }
+
+        .gameStar {
+          position: absolute;
+          top     : 10px;
+          right   : 10px;
+        }
+
+        .game-item-enter {
+          position       : absolute;
+          top            : 100%;
+          left           : 0;
+          display        : flex;
+          justify-content: center;
+          align-items    : center;
+          width          : 100%;
+          height         : 100%;
+          background     : $theme-mask-bg;
+          z-index        : 5;
+          transition     : top 0.3s ease-in-out;
+          border-radius  : 12px;
+          cursor         : pointer;
+
+          &:hover {
+            top: 0;
+          }
+        }
+      }
+
+      .game-item-bottom {
+        padding    : 0 5px 0 5px;
+        display    : flex;
+        align-items: center;
+        width      : 100%;
+        height     : 34px;
+        font-size  : 12px;
+        color      : $theme-base-color;
+        z-index    : 3;
+      }
+    }
+  }
+
+  // 显示更多热门游戏
+  .popular-more {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .popular-more-btn {
+      @extend .theme-popular-more-btn;
+     
+      padding-left: 10px;
+      padding-right: 10px;
+
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      cursor         : pointer;
+     
+      span{
+        // font-weight    : bold;
+        font-size      : 14px;
+        color: var(--primary-color);
+      }
+
+    }
+  }
+
+  // 底部内容
+  .home-footer {
+    margin-top: 15px;
+    padding: 0 10px;
+    .txt-2 {
+      position   : relative;
+      font-weight: 400;
+      font-size  : 12px;
+      color      : $theme-text-color-middle;
+    }
+  }
+}
+
+// 左侧菜单
+.left-menu {
+  margin-top: var(--van-nav-bar-height);
+  left      : auto !important;
+  background: none;
+  position  : fixed;
+  top       : 50%;
+  box-sizing: border-box;
+}

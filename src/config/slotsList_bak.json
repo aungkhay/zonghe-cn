@@ -1,0 +1,63 @@
+[
+  {
+    "type": 1,
+    "key": "pg",
+    "name": "PG",
+    "icon": "/game/icon_pg.png",
+    "bgImg": "/home/slots/pg.jpg",
+    "bgIcon": "/slot-category/pg.jpg",
+    "leftImg": "PG.png",
+    "acLeftImg": "PG2.png",
+    "svg":"pg",
+    "gameCounts": 0
+  },
+  {
+    "type": 2,
+    "key": "pp",
+    "name": "PP",
+    "icon": "/game/icon_pp.png",
+    "bgImg": "/home/slots/pp.png",
+    "bgIcon": "/slot-category/pp.jpg",
+    "leftImg": "PP.png",
+    "acLeftImg": "PP2.png",
+    "svg":"pp",
+    "gameCounts": 0
+  },
+  {
+    "type": 3,
+    "key": "jdb",
+    "name": "JDB",
+    "icon": "/game/icon_jdb.png",
+    "bgImg": "/home/slots/jdb.png",
+    "bgIcon": "/slot-category/jdb.jpg",
+    "leftImg": "JDB.png",
+    "acLeftImg": "JDB2.png",
+    "svg":"jdb",
+    "gameCounts": 0
+  },
+  {
+    "type": 4,
+    "key": "jili",
+    "name": "JILI",
+    "icon": "/game/icon_jili.png",
+    "bgImg": "/home/slots/jili.png",
+    "bgIcon": "/slot-category/jili.jpg",
+    "leftImg": "JILI.png",
+    "acLeftImg": "JILI2.png",
+    "svg":"jili",
+    "gameCounts": 0
+  },
+  {
+    "type": 5,
+    "key": "evoplay",
+    "name": "EvoPlay",
+    "icon": "/game/icon_jili.png",
+    "bgImg": "/home/slots/evoplay.png",
+    "bgIcon": "/slot-category/evoplay.jpg",
+    "leftImg": "JILI.png",
+    "acLeftImg": "JILI2.png",
+    "svg":"evoplay",
+    "gameCounts": 0
+  }
+
+]
