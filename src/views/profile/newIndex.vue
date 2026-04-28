@@ -364,7 +364,7 @@ const downloadApp = () => {
 const downloadIOS = () => {
     const link = document.createElement('a');
     link.href = 'https://app.hjgju8.com/uploads/dl-hj.mobileconfig';
-    link.download = 'huangjia.mobileconfig';
+    link.download = 'letian.mobileconfig';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);  
@@ -373,7 +373,7 @@ const downloadIOS = () => {
 const downloadANROID = () => {
     const link = document.createElement('a');
     link.href = 'https://app.hjgju8.com/uploads/dl-hj.apk';
-    link.download = 'huangjia.apk';
+    link.download = 'letian.apk';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);  

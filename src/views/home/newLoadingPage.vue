@@ -59,7 +59,7 @@ defineExpose({
 
         .logo-top{
             // background: url('#{$img-base-path}/public/logo_1.png') no-repeat center center;
-            background: url('#{$img-base-path}/home/hjlogo.png') no-repeat center center;
+            background: url('#{$img-base-path}/home/hj_new_logo.png') no-repeat center center;
             background-size: 100% 100%;
             position: fixed;
             top:50%;
