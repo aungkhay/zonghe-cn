@@ -3,7 +3,7 @@
         <div class="flex items-center">
             <svg-icon @click="changeLeftMenu" name="sidebar" class="text-[var(--primary-color)] text-[20px] sidebar-icon" :class="{'rotate-180': isRotated}" />
             <!-- <svg-icon name="logo" class="theme-svg-color text-[100px] ml-[5px]" /> -->
-             <img :src="$imgBasePath + '/home/hj_new_logo.png'" class="h-[40px] ml-2" />
+             <img :src="$imgBasePath + '/home/new_logo.png'" class="h-[25px] ml-2" />
         </div>
 
         <!-- 已登录 -->
