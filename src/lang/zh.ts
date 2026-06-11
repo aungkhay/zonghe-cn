@@ -775,6 +775,8 @@ export default {
   "jili_game": "JILI 游戏",
   "cq9_game": "CQ9 游戏",
   "mg_game": "MG 游戏",
+  "fc_game": "FC 游戏",
+  "pa_game": "PA 游戏",
   "evoplay_game": "EVOPLAY 游戏",
   "total_history": "记录数量",
   "profile": {

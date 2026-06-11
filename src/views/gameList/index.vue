@@ -10,7 +10,7 @@
           <div class="flex flex-nowrap justify-start">
             <div v-for="item in slotsList" :key="item.key" class="flex-shrink-0 pr-[13.5px]" :class="{'pr-[0px]': item.key == 'evoplay'}" @click="changeGameTab(item.key)">
               <div class="rounded-xl w-[60px] h-[60px] text-center flex flex-col justify-center items-center text-white" :class="curGameTab == item.key ? 'bg-[var(--primary-color)]' :'bg-[var(--secondary-color)]'">
-                <img :src="$imgBasePath + '/slot-category/' + item.key + '.png'" class="w-[35px] h-[35px]"/>
+                <img :src="$imgBasePath + '/slot-category/' + item.key + '.png'" class="h-[35px]"/>
                 <span class="text-[11px] " :class="curGameTab == item.key ? 'text-white' : 'text-gray-400'">{{ item.name }}</span>
               </div>
             </div>
@@ -187,6 +187,8 @@ const getGameList = async () => {
       spribe:15,
       cq9: 111,
       mg: 136,
+      fc: 124,
+      pa: 104
     };
     const { pageSize, pageNum }: any = page.value;
     let pageObj = {

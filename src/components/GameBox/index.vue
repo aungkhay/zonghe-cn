@@ -8,22 +8,22 @@
       <div><img :src="gameItem.bigImg" alt="" class="h-[120px]"></div>
     </div>
   </div>
-  <div v-else-if="curGameTabKey == 'Fish' || curGameTabKey == 'Card' || curGameTabKey == 'Lotterys' || curGameTabKey == 'Sports'">
+  <div v-else-if="curGameTabKey == 'Card' || curGameTabKey == 'Lotterys' || curGameTabKey == 'Sports'">
     <div class="relative" @click="jumpGame(gameItem)">
-      <!-- <div class="absolute flex flex-col items-center justify-center pl-5 text-[var(--primary-color)] h-full">
-        <div class="text-[#5e6a7b] font-bold">{{ common.getParamsLang() == 'zh' ? gameItem.zh : gameItem.en}}</div>
-        <div class="bg-gradient-to-b from-[var(--primary-color)] via-indigo-300 to-[var(--primary-color)] text-white px-4 py-1 text-sm font-normal rounded-full mt-2 cursor-pointer">{{ $t('enter_game') }}</div>
-      </div> -->
-      <div><img :src="gameItem.bigImg" alt="" class="h-[120px] w-full object-cover rounded-lg"></div>
+      <div><img :src="gameItem.gameImg" alt="" class="h-[120px] w-full object-cover rounded-lg"></div>
       <div class="absolute font-bold text-[20px] text-gray-700 top-11 left-5" :class="[
-        curGameTabKey == 'Fish' ? 'top-16 left-7' : '',
         curGameTabKey == 'Sports' ? 'top-14 left-8' : ''
       ]">
           <span v-if="curGameTabKey != 'Lotterys'">{{ common.getParamsLang() == 'zh' ? gameItem.zh : gameItem.en}}</span>
       </div>
-      <!-- <div class="absolute font-bold text-[20px] text-gray-700" :class="curGameTabKey == 'Fish' ? 'top-16 left-7' : 'top-11 left-5'">
-        {{ common.getParamsLang() == 'zh' ? gameItem.zh : gameItem.en}}
-      </div> -->
+    </div>
+  </div>
+  <div v-else-if="curGameTabKey == 'Fish'">
+    <div class="relative" @click="jumpGame(gameItem)">
+      <div><img :src="gameItem.bigImg" alt="" class="h-[120px] w-full object-cover rounded-lg"></div>
+      <div class="absolute font-bold text-[20px] text-gray-700 top-16 left-7">
+          <span>{{ common.getParamsLang() == 'zh' ? gameItem.zh : gameItem.en}}</span>
+      </div>
     </div>
   </div>
   <div v-else-if="!skeletonShow" v-scaleTap class="game-item" :class="{ 'game-item-2': props.type == 2 }">

@@ -775,6 +775,8 @@ export default {
   "jili_game": "JILI Game",
   "cq9_game": "CQ9 Game",
   "mg_game": "MG Game",
+  "fc_game": "FC Game",
+  "pa_game": "PA Game",
   "evoplay_game": "EVOPLAY Game",
   "total_history": "Total",
   "profile": {

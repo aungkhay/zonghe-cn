@@ -57,7 +57,7 @@ const needRecaptcha = ref(true);
    const getActivityList = async () => {
       const res = await loopPictureApi();
       if(res.code == 200){
-         activityList.value = res.data.data.filter((item:SActivitySwithVo) => item.isOpen == 1);
+         activityList.value = res.data.data.filter((item:SActivitySwithVo) => item.isOpen == 1 && item.imgBig);
       }
    }
   
