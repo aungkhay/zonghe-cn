@@ -363,7 +363,7 @@ const downloadApp = () => {
 
 const downloadIOS = () => {
     const link = document.createElement('a');
-    link.href = 'https://app.hjgju8.com/uploads/dl-hj.mobileconfig';
+    link.href = 'https://yl690.com/download/uploads/永利皇宫.mobileconfig';
     link.download = 'letian.mobileconfig';
     document.body.appendChild(link);
     link.click();
@@ -372,7 +372,7 @@ const downloadIOS = () => {
 
 const downloadANROID = () => {
     const link = document.createElement('a');
-    link.href = 'https://app.hjgju8.com/uploads/dl-hj.apk';
+    link.href = 'https://yl690.com/download/uploads/永利皇宫.apk';
     link.download = 'letian.apk';
     document.body.appendChild(link);
     link.click();
