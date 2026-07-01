@@ -72,7 +72,7 @@ const { t } = useI18n();
 onMounted(async () => {
     await getTabData();
     await getRewardData();
-    await getUrl();
+    // await getUrl();
 })
 
 const url = ref<string>("");

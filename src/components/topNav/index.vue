@@ -6,39 +6,45 @@
              <img :src="$imgBasePath + '/home/yl_new_logo.png'" class="h-[50px] ml-2" />
         </div>
 
-        <!-- 已登录 -->
-        <div v-if="isLogin" class="flex items-center h-[100%]">
-            <!-- 用户信息 -->
-            <div class="user-info-box mr-[7px]">
-                <svg-icon name="cny" class="text-[18px] text-[#e60012]" />
-                <span class="gold-font mr-[4px] ml-[4px]">{{ Number(playerInfo.amount).toFixed(2) }}</span>
-                <svg-icon class="text-[var(--primary-color)] text-[16px]" name="refresh" :class="{ rotate: refreshing }"
-                    @click="refreshBlance()"/>
+        <div class="flex">
+            <!-- 已登录 -->
+            <div v-if="isLogin" class="flex items-center h-[100%]">
+                <!-- 用户信息 -->
+                <div class="user-info-box mr-[7px]">
+                    <svg-icon name="cny" class="text-[18px] text-[#e60012]" />
+                    <span class="gold-font mr-[4px] ml-[4px]">{{ Number(playerInfo.amount).toFixed(2) }}</span>
+                    <svg-icon class="text-[var(--primary-color)] text-[16px]" name="refresh" :class="{ rotate: refreshing }"
+                        @click="refreshBlance()"/>
+                </div>
+                <!-- 跳转充值 -->
+                <!-- <div>
+                    <div v-scaleTap class="charge-btn">
+                        <div  @click="emit('enterDeposit')" class="ml-[10px]" >
+                            <span >{{ $t("110002") }}</span>
+                        </div>
+                        <div class="line-color h-[12px] w-[1px] ml-[10px]"></div>
+                        <div class="flex items-center justify-center px-[8px]" @click="showMenu = !showMenu">
+                            <svg-icon name="arrow-down" class="theme-svg-color-light text-[10px]" :class="{ 'rotate-180': showMenu }" />
+                        </div>
+                    </div>
+                    <div  class="dropdown-menu" v-if="showMenu" ref="dropdownRef">
+                        <button v-scaleTap class="dropdown-item" @click="onSelect">{{ $t("110003") }}</button>
+                    </div>
+                </div> -->
             </div>
-            <!-- 跳转充值 -->
-            <!-- <div>
-                <div v-scaleTap class="charge-btn">
-                    <div  @click="emit('enterDeposit')" class="ml-[10px]" >
-                        <span >{{ $t("110002") }}</span>
-                    </div>
-                    <div class="line-color h-[12px] w-[1px] ml-[10px]"></div>
-                    <div class="flex items-center justify-center px-[8px]" @click="showMenu = !showMenu">
-                        <svg-icon name="arrow-down" class="theme-svg-color-light text-[10px]" :class="{ 'rotate-180': showMenu }" />
-                    </div>
-                </div>
-                <div  class="dropdown-menu" v-if="showMenu" ref="dropdownRef">
-                    <button v-scaleTap class="dropdown-item" @click="onSelect">{{ $t("110003") }}</button>
-                </div>
-            </div> -->
-        </div>
 
-        <!-- 未登录 -->
-        <div  v-else class="login-box">
-            <div v-scaleTap class="enter-btn-login" @click="enterLoginBtn('login')">
-                {{ $t("110000") }}
+            <!-- 未登录 -->
+            <div  v-else class="login-box">
+                <div v-scaleTap class="enter-btn-login" @click="enterLoginBtn('login')">
+                    {{ $t("110000") }}
+                </div>
+                <div v-if="useUserStoreHook().isDLApp == false" v-scaleTap class="enter-btn-register" @click="enterLoginBtn('register')">
+                    {{ $t("110001") }}
+                </div>
             </div>
-            <div v-if="useUserStoreHook().isDLApp == false" v-scaleTap class="enter-btn-register" @click="enterLoginBtn('register')">
-                {{ $t("110001") }}
+            <div v-if="!isWebViewEnv && !isWebClipEnv" class="flex items-center space-x-1 border border-gray-300 rounded-full px-1 text-gray-700" @click="Common.downApp()">
+                <img :src="`${imgBasePath}/profile/download.png`" class="h-[15px]">
+                <div class="text-xs font-bold ml-[-2px]">APP</div>
             </div>
         </div>
     </div>
@@ -51,16 +57,17 @@ import {
     ref,
     getCurrentInstance,
     computed,
-    defineEmits,
-    defineExpose,
-    onUnmounted
+    onUnmounted,
 } from "vue";
 import { useUserStoreHook } from "@/store/modules/user";
 import { userInfoApi } from "@/api/user/index";
 import Common from "@/utils/common/common";
+const { proxy } = getCurrentInstance();
+const imgBasePath = proxy.$imgBasePath;
 const showMenu = ref(false);
 const dropdownRef = ref(null);
-
+const isWebViewEnv = ref(false);
+const isWebClipEnv = ref(false);
 
 const handleClickOutside = (event: MouseEvent) => {
   if (event.type !== 'mousedown') return;
@@ -138,6 +145,8 @@ onActivated(async () => {
 })
 
 onMounted(() => {
+    isWebViewEnv.value = Common.isWebView();
+    isWebClipEnv.value = Common.isWebClip();
     document.addEventListener('mousedown', handleClickOutside);
 })
 onUnmounted(() => {

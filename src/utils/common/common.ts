@@ -722,6 +722,52 @@ export default {
    handleImagePath(path: string) {
     // 如果路径中包含 /zh/ 则替换为 /en/
     return path.replace(/\/zh\//g, '/en/');
-  }
+  },
 
-};
+  isWebView() {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    return /HJWebView/i.test(userAgent);
+  },
+
+  isWebClip() {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    return /WebClip/i.test(userAgent);
+    // return (window.navigator as any)?.standalone === true;
+  },
+
+  isIOS() {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    return /iPhone|iPad|iPod/i.test(userAgent);
+  },
+
+  isAndroid() {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    return /Android/i.test(userAgent);
+  },
+
+  downApp() {
+      if (this.isIOS()) {
+          this.downloadIOS();
+      } else if (this.isAndroid()) {
+          this.downloadANROID();
+      }
+  },
+
+  downloadIOS() {
+      const link = document.createElement('a');
+      link.href = 'https://yl690.com/download/uploads/永利皇宫.mobileconfig';
+      link.download = 'letian.mobileconfig';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);  
+  },
+
+  downloadANROID() {
+      const link = document.createElement('a');
+      link.href = 'https://yl690.com/download/uploads/永利皇宫.apk';
+      link.download = 'letian.apk';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);  
+  }
+}

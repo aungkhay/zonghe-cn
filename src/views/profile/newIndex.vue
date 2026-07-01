@@ -111,7 +111,7 @@
             </div>
             <div v-if="!isWebViewEnv && !isWebClipEnv">
                 <div class="h-[1px] my-3 bg-gray-100"></div>
-                <div class="flex items-center space-x-2" @click="downloadApp()">
+                <div class="flex items-center space-x-2" @click="Common.downApp()">
                     <div>
                         <img :src="`${imgBasePath}/profile/download.png`" class="h-[17px]">
                     </div>
@@ -337,48 +337,6 @@ const logout = () => {
   });
 };
 
-function isWebView() {
-    return navigator.userAgent.includes("HJWebView");
-}
-
-function isWebClip() {
-    return (window.navigator as any)?.standalone === true;
-}
-
-const isIOS = () => {
-  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-};
-
-const isAndroid = () => {
-  return /Android/i.test(navigator.userAgent);
-};
-
-const downloadApp = () => {
-    if (isIOS()) {
-        downloadIOS();
-    } else if (isAndroid()) {
-        downloadANROID();
-    }
-}
-
-const downloadIOS = () => {
-    const link = document.createElement('a');
-    link.href = 'https://yl690.com/download/uploads/永利皇宫.mobileconfig';
-    link.download = 'letian.mobileconfig';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);  
-}
-
-const downloadANROID = () => {
-    const link = document.createElement('a');
-    link.href = 'https://yl690.com/download/uploads/永利皇宫.apk';
-    link.download = 'letian.apk';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);  
-}
-
 const confirmLogout = async () => {
   let { code }: any = await logoutApi();
   if (code == 200) {
@@ -401,8 +359,8 @@ const getNotiCount = async () => {
 }
 
 onMounted(async () => {
-    isWebViewEnv.value = isWebView();
-    isWebClipEnv.value = isWebClip();
+    isWebViewEnv.value = Common.isWebView();
+    isWebClipEnv.value = Common.isWebClip();
     await refreshBlance();
     await getVipInfo();
     await getNotiCount();
